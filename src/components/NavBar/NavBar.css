@@ -1,0 +1,43 @@
+/* nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    background: rgb(126, 156, 211);
+}
+
+.container-logo {
+    width: 150px;
+}
+
+.container-logo img {
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 15px;
+}
+
+nav ul li:nth-of-type(1) {
+    margin-left: 0px;
+}
+
+nav button {
+    color: black !important;
+    border-color: black !important;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+} */
+
+.selected{
+    color: #EE0E51 !important;
+}
