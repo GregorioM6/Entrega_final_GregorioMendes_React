@@ -1,0 +1,13 @@
+.loading{
+    display: flex;
+    justify-content: center;
+    color: white;
+    
+}
+
+.containerProductos{
+ display: flex;
+ flex-direction: column;
+ text-align: center;
+ 
+}
