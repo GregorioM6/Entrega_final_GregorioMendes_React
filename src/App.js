@@ -1,5 +1,5 @@
 import './components/styles/App.css';
-import {BrowserRouter, Switch, Route } from 'react-router-dom';
+import {BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ItemDetailContainer } from './components/ItemDetailContainer';
 import ItemListContainer  from './components/ItemListContainer';
 import NavBar from './components/NavBar';
@@ -13,11 +13,15 @@ function App() {
   return (
     <CacheProvider>
     <BrowserRouter>
-      <NavBar />
-      <Switch>
-        <Route exact path="/">
-          <ItemListContainer />
-        </Route>
+      {<NavBar />}
+        <Routes>
+        <Route exact path='/Compras' element={<ItemListContainer/>}/>
+        <Route exact path='/product' element={<ItemListContainer/>}/>
+        <Route exact path='/category/:categoryId' element={<ItemListContainer/>}/>
+        <Route exact path='/item/:id' element={<ItemDetailContainer/>}/>
+        <Route exact path='/cart' element={<Cart/>}/>
+        <Route exact path='/FinalOrden' element={<FinalOrden/>}/>
+      {/*
         <Route exact path="/product">
           <ItemListContainer />
         </Route>
@@ -33,7 +37,8 @@ function App() {
           <Route exact path="/FinalOrden">
           <FinalOrden/>
         </Route>
-      </Switch>
+      */}
+      </Routes> 
     </BrowserRouter>
     </CacheProvider>
     );

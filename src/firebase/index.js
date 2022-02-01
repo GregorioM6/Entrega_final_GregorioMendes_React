@@ -8,7 +8,6 @@ const firebaseConfig = {
     storageBucket: "mla-esports.appspot.com",
     messagingSenderId: "818334399775",
     appId: "1:818334399775:web:827e5b6adae26180be442a",
-    measurementId: "G-V6LLT852TN"
 };
 
 const app = initializeApp(firebaseConfig);

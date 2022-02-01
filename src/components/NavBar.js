@@ -1,7 +1,8 @@
 //Inicia con : npm start (en la terminal)
 
 
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import MLALogo from './img/MLA_LOGO.png';
 import CartWidget from './CartWidget'
 
 import './styles/NavBar.css'
@@ -11,13 +12,20 @@ function NavBar() {
     return(
         <div>
             <header className="header">
-                <h1>LOGO</h1>
+            <li><Link to={`/Inicio`}><img className="MLALogo" src={MLALogo} alt="Logo"/> </Link></li>
+            {/* <a id="logo" href="index.html">
+                        <img class="header__logo"
+                            src="imagenes/MLA_LOGO.png"
+                            alt="LOGO"
+                        />
+                    </a> */}
                     <nav className="navBar">
-                    <ul className="navBarLista">
-                    <li className="navBarItems"><NavLink  exact to={"/"}>Inicio</NavLink></li>
-                            <li className="navBarItems"><NavLink  exact to={"/category/MATE"}>Mates</NavLink></li>
-                            <li className="navBarItems"><NavLink  exact to={"/category/MACETA"}>Macetas</NavLink></li>
-                            <li className="navBarItems"><NavLink  exact to={"/category/FIGURA"}>Figuras de Acción</NavLink></li>
+                        <ul className="navBarLista">
+                            <li><Link to={`/Inicio`}>Home </Link></li>
+                            <li><Link to={`/Compras`}>Compras </Link></li>
+                            <li><Link to={`/Equipo`}>Equipo </Link></li>
+                            <li><Link to={`/Contacto`}>Contacto </Link></li>
+                            <li><Link to={`/Empresa`}>Empresa </Link></li>
                             <CartWidget />
                         </ul>
                     </nav>

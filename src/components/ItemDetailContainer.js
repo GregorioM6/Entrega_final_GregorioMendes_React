@@ -7,7 +7,6 @@ import { getFirestore } from "../firebase/index";
 export const ItemDetailContainer = () => {
 
     const {id} = useParams()
-   
     const [item, setItem] = useState(null)
 
 
@@ -18,21 +17,14 @@ export const ItemDetailContainer = () => {
         getDocs(collection(db,"items")).then
         ((snapshot)=> setItem(snapshot.docs.map((doc)=> doc.data())))
 
-       
     }, []);
-  
-    
 
-  return (
+return (
         <div>
             <div>
                 <p>ITEM DETAIL</p>
-               
-                  { item ? <ItemDetail item={item[id]} key={id}/> : "loading" }    
-                
-               
+                { item ? <ItemDetail item={item[id]} key={id}/> : "loading" }    
             </div>
-           
         </div>
     );
 }

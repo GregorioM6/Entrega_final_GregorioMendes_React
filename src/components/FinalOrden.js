@@ -11,7 +11,7 @@ export const FinalOrden = () => {
 
     const { cache, cartTotalAmount } = useContext(CartContext);
     const [orderNumber, setOrderNumber] = useState(null);
-  
+
     const [buyer, setBuyer] = useState({
         name: '',
         email: '',
@@ -37,7 +37,7 @@ export const FinalOrden = () => {
             }
             addDoc(orders, newOrder).then(({ id }) => {
                 setOrderNumber(id);
-              });
+            });
             console.log(newOrder)
             alert("Se agrego el producto exitosamente!")
         } catch (err) {
@@ -46,24 +46,21 @@ export const FinalOrden = () => {
     }
 
 
-  return (
-     <div >
-             
-
-         <form  id="form" className='orden' onSubmit = {handleSubmit}>
+return (
+    <div >
+        <form  id="form" className='orden' onSubmit = {handleSubmit}>
         <label>Ingrese NOMBRE</label>
-             <BuyerForm setBuyer={setBuyer} name ='name' buyer={buyer}/>
+            <BuyerForm setBuyer={setBuyer} name ='name' buyer={buyer}/>
         <label>Ingrese E-mail</label>
-             <BuyerForm setBuyer={setBuyer} name ='email' buyer={buyer}/>
+            <BuyerForm setBuyer={setBuyer} name ='email' buyer={buyer}/>
         <label>Ingrese Telefono</label>
-             <BuyerForm setBuyer={setBuyer} name ='phone' buyer={buyer}/>
-             <button className='enviar' type='submit'>
-                 FINALIZAR COMPRA
-             </button>
-         </form>
-           
-       </div>
-     )
+            <BuyerForm setBuyer={setBuyer} name ='phone' buyer={buyer}/>
+            <button className='enviar' type='submit'>
+                FINALIZAR COMPRA
+            </button>
+        </form> 
+    </div>
+    )
 }
 
 export default FinalOrden;

@@ -7,16 +7,9 @@ import './styles/Cart.css'
 export const Cart = () => {
 
     const { cache, clear, cacheSize, cartTotalAmount } = useContext(CartContext);
-  
-   
-  
-
     return (
         <div >
             <h1>CART</h1> 
-            
-           
-
             { cacheSize === 0 && 
                 <div className="estiloSinItems" >
                     <div>

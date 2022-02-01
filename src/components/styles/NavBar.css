@@ -1,4 +1,11 @@
-
+* {
+    margin: 0px;
+    padding: 0px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
 
 .header{
     display:flex;
@@ -17,7 +24,7 @@
     filter: drop-shadow(0 0 1px #000) drop-shadow(1px 1px 0 #000)  drop-shadow(-1px 1px 0 #000) drop-shadow(1px -1px 0 #000) drop-shadow(-1px -1px 0 #000);
     cursor: pointer;
    /* transform: translate(100%); */
-   font-size: 150%;
+    font-size: 150%;
 };
 
 .navBarItems{
@@ -44,6 +51,14 @@
     
 }
 
+.MLALogo{
+    width: 100px;
+    height: 100px;
+    
+    object-fit: cover;
+    text-align: center;
+    
+}
 
 /*MEDIA QUERIES*/
 
@@ -63,3 +78,4 @@
     }
 
 }
+

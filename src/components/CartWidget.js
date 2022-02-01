@@ -3,6 +3,7 @@ import imagenCarrito from './img/carritoCompras.png';
 import { NavLink } from 'react-router-dom';
 import React, { useContext } from 'react';
 import CartContext from '../context/CartContext';
+import { Link } from 'react-router-dom';
 
 
 
@@ -10,19 +11,15 @@ export const CartWidget = () => {
 
     const { cacheSize } = useContext(CartContext);
 
-     return(
+    return(
         <div> 
             
-            
-            <NavLink className="nav-link" activeClassName="selected" exact to={"/cart"}>
-               
+            <Link className="nav-link" to={`/cart`}>
             <img className="imagenCarrito" src={imagenCarrito} alt="carrito" /> { cacheSize !== 0 && <sup>{cacheSize}</sup> }
-            </NavLink>
-    
-            
+            </Link>
         </div> 
     )
 }
 
- export default CartWidget 
+export default CartWidget 
 
