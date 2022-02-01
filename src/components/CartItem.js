@@ -6,10 +6,8 @@ import './styles/Cart.css'
 
 export const CartItem = ({item }) => {
 
-   
     const { removeItem } = useContext(CartContext);
- 
- 
+
     return (
         <>  
                 <div >
@@ -19,7 +17,7 @@ export const CartItem = ({item }) => {
                                 <div >
                                     <img className= "imgContainer" src= {item.item.img} alt={item.item.name} />  
                                 </div>
-                                 <div >
+                                <div >
                                     <div>
                                         <h5 >{ item.item.name }</h5>
                                         <p ><small >{ item.item.description }</small></p>
@@ -34,8 +32,6 @@ export const CartItem = ({item }) => {
                             </div>
                         </div>    
                     </div>  
-                   
-                      
-       </> 
+    </> 
     )
 }

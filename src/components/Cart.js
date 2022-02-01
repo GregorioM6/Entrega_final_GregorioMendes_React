@@ -24,23 +24,19 @@ export const Cart = () => {
                 <div>
                     <div>
                         <div className="containerCart">
-                       { cache.map((item) => 
-                       <CartItem key={item.id} item={item}/> )
-                    
+                        { cache.map((item) => 
+                    <CartItem key={item.id} item={item}/> )
                         }
-                           
                         </div>
-                     
                         <div className="containerVaciarSeguir ">
-                              <button  >Total de compra: $ {cartTotalAmount}</button>
-                            <NavLink  exact to={"/"}> <button className="buttonSeguir">Seguir Comprando</button></NavLink>
-                            <button className="buttonVaciar" onClick={() => clear()}>Vaciar carrito</button>
-                            <NavLink  exact to={"/finalOrden"}>Finalizar mi compra</NavLink>
+                            <button  >Total de compra: $ {cartTotalAmount}</button>
+                            <NavLink  exact to={"/Compras"}> <button className="btn btn-success">Seguir Comprando</button></NavLink>
+                            <button className="btn btn-danger" onClick={() => clear()}>Vaciar carrito</button>
+                            <button className="btn btn-outline-secondary"> <NavLink  exact to={"/finalOrden"}>Finalizar mi compra</NavLink> </button>
                         </div>
                     </div>
                 </div>
             }
-
         </div>
     )
 }

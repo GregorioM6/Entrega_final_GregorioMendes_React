@@ -3,8 +3,6 @@ import CartContext from '../context/CartContext';
 import '@firebase/firestore';
 import { getFirestore } from '../firebase';
 import {collection, addDoc} from "firebase/firestore";
-
-import "./styles/finalOrden.css"
 import BuyerForm from './Form';
 
 export const FinalOrden = () => {
@@ -45,20 +43,27 @@ export const FinalOrden = () => {
         }
     }
 
-
 return (
-    <div >
+    <div>
+        <div className='container'>
         <form  id="form" className='orden' onSubmit = {handleSubmit}>
-        <label>Ingrese NOMBRE</label>
-            <BuyerForm setBuyer={setBuyer} name ='name' buyer={buyer}/>
-        <label>Ingrese E-mail</label>
-            <BuyerForm setBuyer={setBuyer} name ='email' buyer={buyer}/>
-        <label>Ingrese Telefono</label>
-            <BuyerForm setBuyer={setBuyer} name ='phone' buyer={buyer}/>
-            <button className='enviar' type='submit'>
+            <div class="input-group mb-6">
+                <label class="input-group-text fw-light col-5" id="basic-addon1">Ingrese NOMBRE:</label>
+                <BuyerForm setBuyer={setBuyer} name ='name' buyer={buyer}/>
+            </div>
+            <div class="input-group mb-6">
+                <label class="input-group-text fw-light col-5" id="basic-addon1">Ingrese E-mail:</label>
+                <BuyerForm setBuyer={setBuyer} name ='email' buyer={buyer}/>
+            </div>
+            <div class="input-group mb-6">
+                <label class="input-group-text fw-light col-5" id="basic-addon1">Ingrese Telefono:</label>
+                <BuyerForm setBuyer={setBuyer} name ='phone' buyer={buyer}/>
+            </div>
+            <button class="btn btn-secondary" className='enviar' type='submit'>
                 FINALIZAR COMPRA
             </button>
         </form> 
+        </div>
     </div>
     )
 }

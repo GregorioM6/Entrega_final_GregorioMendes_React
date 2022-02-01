@@ -6,38 +6,24 @@ import NavBar from './components/NavBar';
 import { Cart } from './components/Cart';
 import CacheProvider from './provider/CacheProvider';
 import {FinalOrden} from './components/FinalOrden';
-
+import {HomePage} from './components/HomePage';
+import {EquiposPage} from './components/EquiposPage';
 
 function App() {
 
   return (
     <CacheProvider>
     <BrowserRouter>
-      {<NavBar />}
+      <NavBar />
         <Routes>
-        <Route exact path='/Compras' element={<ItemListContainer/>}/>
+        <Route exact path='/Inicio' element={<HomePage/>}/>
+        <Route exact path='/Equipos' element={<EquiposPage/>}/>
+        <Route exact path='/Productos' element={<ItemListContainer/>}/>
         <Route exact path='/product' element={<ItemListContainer/>}/>
         <Route exact path='/category/:categoryId' element={<ItemListContainer/>}/>
         <Route exact path='/item/:id' element={<ItemDetailContainer/>}/>
         <Route exact path='/cart' element={<Cart/>}/>
         <Route exact path='/FinalOrden' element={<FinalOrden/>}/>
-      {/*
-        <Route exact path="/product">
-          <ItemListContainer />
-        </Route>
-        <Route exact path="/category/:categoryId">
-            <ItemListContainer/>
-          </Route>
-        <Route exact path="/item/:id">
-          <ItemDetailContainer />
-        </Route> 
-        <Route exact path="/cart">
-          <Cart />
-        </Route>
-          <Route exact path="/FinalOrden">
-          <FinalOrden/>
-        </Route>
-      */}
       </Routes> 
     </BrowserRouter>
     </CacheProvider>

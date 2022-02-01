@@ -40,6 +40,7 @@ export default function CacheProvider({ defaultValue = [] , children }) {
     
     function clear(){
         setCache(defaultValue);
+        setCartTotalAmount(0);
     }
 
     function increaseQuantity( x, obj ){
