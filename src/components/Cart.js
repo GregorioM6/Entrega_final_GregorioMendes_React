@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import CartContext from '../context/CartContext'
 import { CartItem } from './CartItem';
 import './styles/Cart.css'
@@ -15,7 +15,7 @@ export const Cart = () => {
                     <div>
                         <p >No tiene items agregados</p>
                     </div>
-                    <NavLink  exact to={"/"}>Volver al inicio</NavLink>
+                    <Link  to={"/"}>Volver al inicio</Link>
                 </div>
             }
 
@@ -30,9 +30,9 @@ export const Cart = () => {
                         </div>
                         <div className="containerVaciarSeguir ">
                             <button  >Total de compra: $ {cartTotalAmount}</button>
-                            <NavLink  exact to={"/Compras"}> <button className="btn btn-success">Seguir Comprando</button></NavLink>
+                            <Link to={"/Productos"}> <button className="btn btn-success">Seguir Comprando</button></Link>
                             <button className="btn btn-danger" onClick={() => clear()}>Vaciar carrito</button>
-                            <button className="btn btn-outline-secondary"> <NavLink  exact to={"/finalOrden"}>Finalizar mi compra</NavLink> </button>
+                            <button className="btn btn-outline-secondary"> <Link  to={"/finalOrden"}>Finalizar mi compra</Link> </button>
                         </div>
                     </div>
                 </div>
